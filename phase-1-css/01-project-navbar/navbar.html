@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Navbar</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #1a1a1a;
+        color: white;
+      }
+      .nav-container {
+        margin-bottom: 40px;
+      }
+      h2 {
+        margin-bottom: 10px;
+      }
+      .nav1 {
+        background-color: #f8f9f1;
+        padding: 1px;
+      }
+      .nav1 ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+      }
+      .nav1 li {
+        display: inline;
+      }
+      .nav1 a {
+        text-decoration: none;
+        color: firebrick;
+
+        padding: 5px 10px;
+        position: relative;
+      }
+      .nav1 .login-btn {
+        background-color: darkslategrey;
+        color: #fff;
+        padding: 5px 15px;
+      }
+
+      .nav1 a::after {
+        content: "page";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: saddlebrown;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .nav1 a:hover::after {
+        transform: scaleX(1);
+      }
+
+      .nav2 {
+        background-color: #03643c;
+        width: 200px;
+        padding: 20px;
+      }
+
+      .nav2 ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav2 li {
+        margin-bottom: 10px;
+      }
+
+      .nav2 a {
+        text-decoration: none;
+        color: #f8f9f1;
+        display: block;
+        padding: 5px 10px;
+      }
+      .nav2 a:hover {
+        background-color: #137e0a;
+      }
+
+      .nav2 .login-btn {
+        border: none;
+        width: 100%;
+        background-color: #08512c;
+        color: #f8f9f1;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .nav3 {
+        background-color: #45a2bb;
+        padding: 10px;
+      }
+      .nav3 ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .nav3 a {
+        text-decoration: none;
+        color: #f8f9f1;
+        padding: 10px;
+        display: block;
+      }
+      .nav3 .dropdown-content {
+        display: none;
+      }
+      .nav3 .dropdown:hover .dropdown-content {
+        display: block;
+        position: absolute;
+        background-color: darkgray;
+      }
+    </style>
+  </head>
+  <body>
+    <!--navbar one -->
+    <div class="nav-container">
+      <h2>Variation1: Horizontal with underline effect</h2>
+      <nav class="nav1">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products </a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!--navbar Two -->
+    <div class="nav-container">
+      <h2>Variation2: Vertical with hover effect</h2>
+      <nav class="nav2">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products </a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!--navbar Three -->
+    <div class="nav-container">
+      <h2>Variation3: horizontal with dropdown</h2>
+      <nav class="nav3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">about</a>
+            <div class="dropdown-content">
+              <a href="#">Our Story</a>
+              <a href="#">Team</a>
+              <a href="#">contact</a>
+            </div>
+          </li>
+          <li><a href="#">Products </a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
